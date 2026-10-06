@@ -1,0 +1,57 @@
+A linguagem P possui as seguintes características:
+• é uma linguagem de tipagem forte (linguagem de programação que proíbe conversão implícita ou automática entre tipos de dados incompatíveis);
+• todas as variáveis e parâmetros de funções devem possuir um tipo;
+• todas as variáveis devem ser declaradas antes do uso;
+• existem regras restritas para compatibilidade dos tipos;
+• todas as funções começam com a palavra reservada fn;
+• a função principal é definida como fn main() { ... }.
+3.2. Tipos
+Os tipos disponíveis são:
+Tipo Descrição
+int inteiro
+float ponto flutuante
+char caractere
+As regras de compatibilidade fornecidas são:
+int é compatível somente com int,
+float é compatível somente com float,
+char é compatível somente com char.
+3.3. Identificadores
+ID é o token utilizado para identificadores. Um identificador, isto é, o nome de uma variável
+ou função, pode começar com uma letra e ser seguido por letra, número ou underline.
+A expressão regular fornecida é:
+[a-zA-Z]([a-zA-Z0-9_])*
+3.4. Constantes inteiras e de ponto flutuante
+INT_CONST representa números inteiros:
+[0-9]([0-9])*
+FLOAT_CONST representa números de ponto flutuante:
+[0-9]([0-9])*.[0-9]([0-9])*
+A especificação informa expressamente que não são aceitos números na notação científica. O
+ponto da expressão regular representa o separador decimal na especificação da linguagem.
+3.5. Literais de caractere
+CHAR_LITERAL representa um caractere literal entre aspas simples. Exemplos fornecidos:
+'a', '+', '_'.
+Entre as aspas simples é aceito qualquer caractere válido na linguagem P.
+3.6. Strings de formatação
+FMT_STRING representa uma string de formatação entre aspas duplas.
+A string de formatação:
+• sempre inicia e termina com aspas duplas;
+• pode conter qualquer combinação de símbolos válidos na linguagem P;
+• pode conter o marcador especial {};
+• o marcador {} indica a posição em que serão impressos valores do tipo inteiro, ponto
+flutuante ou caractere.
+3.7. Palavras reservadas
+As palavras reservadas são:
+fn, main, let, int, float, char, if, else, while, println, return.
+3.8. Sinais de pontuação e estruturação
+( ) -> : , { } ;
+3.9. Operadores
+=, ==, !=, >, >=, <, <=, +, -, *, /
+3.10. Precedência dos operadores
+A ordem fornecida, da menor para a maior precedência, é:
+== !=
+< <= > >=
++ -
+* /
+Operadores que aparecem na mesma linha possuem a mesma precedência. Os operadores *
+e / possuem a maior precedência. O uso de parênteses pode alterar a precedência natural
+das operações.
